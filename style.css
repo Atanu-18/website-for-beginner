@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px;  */
+}
+
+body {
+
+}
+
+:root {  /* simple tricks & tips use er jonno */
+    --primary-color:#000839;
+    --primary-shades: #00020b;
+    --para-color: #80849c;
+    --helper-color: #1264fa;
+    --white: #fff;
+    --bg-color: #e6e6eb;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+h1,h2,h3,h4 {
+    color: var(--primary-color);
+}
+
+.para {            /* 99% case ei p tag er style use hoy */
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color: var(--para-color);
+}
+
+/*---------------------------- 
+header and navbar style start
+---------------------------- */
+
+.header {
+    height: 9.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5.4rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem; /* every word er modhe gap anar jonno */
+    font-size: 1.5rem;
+}
+
+.navbar-list .navbar-btn {
+    padding: 1.2rem 2.4rem;  /* width,height */
+    background-color: var(--white);
+    border: 1px solid var(--helper-color);
+    color: var(--helper-color);
+    border-radius: 10rem;  /* tips - width & height equal na hole btn kaj korbe na -------- 2. tips - padding er width r height er theke besi hole then good size hobe automatically */
+    transition: all 0.3s linear;
+}
+
+.navbar-list .navbar-link:hover,
+.navbar-list .navbar-link:active {
+    color: var(--helper-color);
+}
+
+.navbar-btn:hover,
+.navbar-btn:active {
+    background-color: var(--helper-color);
+    color: var(--white);
+}
+
+.navbar-link {
+    text-transform: uppercase;
+}
+
+.fa-solid {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.mobile-navbar-btn {
+    display: none;           /* icon gulo k jate na dekha jay sejonno */
+}
+
+.fa-solid[name="close"] {
+    display: none;
+}
+
+/* reusable coe */
+section {
+    padding: 9.6rem 0;
+}
+
+.container {
+    max-width: 130rem;
+    /* max-height: 50px; */
+    margin-top: 10px;
+    margin: 0 auto;
+    /* padding: 0 3.2rem; */
+}
+
+.left-container, .right-container {    /*left,right -c container ekta page e dobule style er jonno double color */
+    /* height: 100vh; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.left-container {
+    width: 50%;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    gap: 96px;
+}
+
+.grid-two-column {
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.btn {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1.6rem 3.2rem;
+    border-radius: 10rem;
+    background-color: var(--helper-color);
+    color: var(--white);
+    transition: all 0.2s ease;
+}
+
+.btn:hover, .btn:active {
+    transform: scale(1.05);
+}
+
+/*---------------------------- 
+header and navbar style start
+---------------------------- */
+.section-hero {
+    position: relative;
+}
+
+.section-hero::before{    /* back side e box anar jonno */
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 9.6rem;
+    right: 0;
+    width: 30%;
+    height: 50%;
+    background-color: var(--bg-color);
+    z-index: -1;
+}
+
+.primary-heading {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.section-hero .para {
+    margin-top: 2rem;
+    margin-bottom: 3.2rem;
+}
+
+.hero-icons {
+    margin-top: 4.2rem;
+}
+
+.hero-icons .hero-icon-style {
+    font-size: 2.5rem;
+    position: relative;
+}
+
+
+.hero-icons .hero-icon-style::after {   /* icon gulor opor blue ekta dot anar jonno */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 10%;
+    background-color: var(--helper-color);
+    border-radius: 50%;
+    opacity: 0.7; /* map e bosanor jonno */
+}
+
+.hero-icons h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.section-hero .hero-icon-style .para{
+    line-height: 1.6; /* likha gulo k list moto korar jonno */
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero-img img {
+    height: 100%;
+    box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.1);
+}
+
+/* likha gulo k size korar jonno */
+.hero-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: -2.5%;
+    background-color: var(--primary-color);
+    /* padding: 4rem; */
+}
+
+.hero-img-overlay .para {
+    columns: var(--white);
+}
+
+.hero-img-overlay .para:nth-child(2) {
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero-img-overlay .para:last-child {
+    margin: 0;
+}
+
+/*---------------------------- 
+media queries style start
+---------------------------- */
+
+@media(max-width:1250px) {
+    .container {
+        padding: 0 6rem;
+    }
+    html {
+        font-size: 56.255%;
+        /* 1 rem = 16px;  -- by default
+        1 rem = 9px; */
+    }
+}
+@media(max-width:980px) {
+    .container {
+        max-width: 960px;
+    }
+    .section-hero .grid-two-column {
+        grid-template-columns: 1fr;
+    }
+    .section-hero .hero-icons .grid-two-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
